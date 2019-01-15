@@ -46,6 +46,23 @@ export default class HomeScreen extends React.Component {
             </Text>
           </View>
 
+          <View>
+            <Text style={{
+                borderWidth: 1,
+                borderColor: '#aaa',
+                backgroundColor: '#ccc',
+                margin: 5,
+                padding: 10,
+            }
+            }     onPress={() => {
+                const {navigate} = this.props.navigation;
+                navigate('MyStage', {name: 'MyStage'}, null);
+
+            }}>
+                Touch here to go to the magic stage
+            </Text>
+          </View>
+
           <View style={styles.helpContainer}>
             <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
               <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
